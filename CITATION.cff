@@ -1,0 +1,12 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "WindowWise: planning, diagnostics and repair for umbrella sampling"
+authors:
+  - family-names: Panigrahy
+    given-names: Sibasankar
+version: 0.1.0
+date-released: 2026-10-09
+license: MIT
+repository-code: "https://github.com/siba-p/windowwise"
+url: "https://siba-p.github.io/windowwise/"
+keywords: [umbrella sampling, WHAM, free energy, Gaussian process, active learning, molecular dynamics]

@@ -1,0 +1,35 @@
+[build-system]
+requires = ["setuptools>=64"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "windowwise"
+version = "0.1.0"
+description = "Plan, check and repair umbrella-sampling simulations: WHAM with bootstrap errors, overlap diagnostics, repair windows and Gaussian-process umbrella integration with active learning."
+readme = "README.md"
+license = { text = "MIT" }
+authors = [{ name = "Sibasankar Panigrahy" }]
+requires-python = ">=3.9"
+dependencies = ["numpy>=1.21"]
+keywords = ["umbrella sampling", "WHAM", "free energy", "potential of mean force", "molecular dynamics", "GROMACS", "Gaussian process", "active learning"]
+classifiers = [
+  "Programming Language :: Python :: 3",
+  "License :: OSI Approved :: MIT License",
+  "Intended Audience :: Science/Research",
+  "Topic :: Scientific/Engineering :: Chemistry",
+  "Topic :: Scientific/Engineering :: Physics",
+]
+
+[project.optional-dependencies]
+plot = ["matplotlib>=3.5"]
+test = ["pytest>=7"]
+
+[project.scripts]
+windowwise = "windowwise.cli:main"
+
+[project.urls]
+Homepage = "https://siba-p.github.io/windowwise/"
+Source = "https://github.com/siba-p/windowwise"
+
+[tool.setuptools.packages.find]
+where = ["src"]
