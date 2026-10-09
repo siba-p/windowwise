@@ -75,7 +75,7 @@ def gp_pmf(windows: list[Window], grid: np.ndarray | None = None, npoints: int =
     if grid is None:
         grid = np.linspace(x.min(), x.max(), npoints)
     spacing = np.median(np.diff(x)) if len(x) > 1 else span
-    ells = [lengthscale] if lengthscale else np.geomspace(max(spacing * 0.5, span / 200), span / 1.5, 28)
+    ells = [lengthscale] if lengthscale else np.geomspace(max(spacing, span / 200), span / 1.5, 28)
     yscale = max(np.std(y), np.max(np.abs(y)) / 3, 1e-9)
     amps = [amplitude] if amplitude else None
     best = None

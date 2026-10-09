@@ -73,8 +73,8 @@ All numbers are from `pytest`, against an analytic Morse-type adsorption PMF (30
 | test | result |
 |---|---|
 | WHAM vs exact PMF, 41 windows | RMSE **0.33 kJ/mol**; median bootstrap error 0.35 kJ/mol |
-| GP umbrella integration, 41 / 21 / 11 windows | RMSE 0.36 / 0.52 / 1.05 kJ/mol |
-| GP 95% band covering the exact PMF (41 / 11 windows) | 83% / 95%. The band is mildly over-confident with dense windows, because ⟨A′⟩ differs from A′(⟨ξ⟩) at second order. |
+| GP umbrella integration, 41 / 21 / 11 windows | RMSE 0.22–0.36 / 0.50–0.52 / 0.80 kJ/mol (two independent datasets) |
+| GP 95% band covering the exact PMF | 83–93%. The band is mildly over-confident, because ⟨A′⟩ differs from A′(⟨ξ⟩) at second order; the length scale is constrained to be at least one window spacing. |
 | Removed block of windows | detected; repair windows and GP active-learning picks land inside the gap |
 | Soft springs on a steep wall | flagged as drift; slope estimate within 2% of the analytic value |
 | ~800 k<sub>B</sub>T-deep PMF | converges via the log-space fallback |
